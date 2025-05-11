@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortran Online Runner</title>
+  <title>Fortran Live Runner</title>
 </head>
 <body>
-    <h2>Fortran Online Runner</h2>
-    <input class="fileName" placeholder="Enter file name" /><br>
-    <!--<input id="input" placeholder="Enter input for program" /><br>-->
-    <textarea class="codeText"></textarea>
-    <button onclick="run()">Compile and Run</button>
-    <pre id="output"></pre>
-    <textarea class="input" placeholder="Enter input (one per line)"></textarea>
-    <button onclick="inputConsole()">enter</button>
-    <script src="/static/main.js"></script>  <!-- Link to the external JS file -->
+  <h2>Fortran Live Runner</h2>
+  <input class="fileName" placeholder="Enter file name"><br>
+  <textarea class="codeText" placeholder="Enter Fortran code"></textarea><br>
+  <button onclick="compileAndRun()">Compile & Run</button>
+  <pre id="output"></pre>
+
+  <div id="inputBox">
+    <input id="inputField" placeholder="Enter input">
+    <button onclick="sendInput()">Send</button>
+  </div>
+
+  <script src="../static/main.js"></script>
 </body>
 </html>
