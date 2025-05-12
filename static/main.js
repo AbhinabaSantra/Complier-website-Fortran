@@ -1,5 +1,5 @@
 let sessionId = null;
-
+const BACKEND_URL = 'https://fortran-live-compiler.onrender.com'
     function compileAndRun() {
       const fileName = document.querySelector(".fileName").value.trim();
       const codeText = document.querySelector(".codeText").value.trim();
@@ -7,7 +7,7 @@ let sessionId = null;
       output.textContent = "";
       sessionId = null;
 
-      fetch("/compile", {
+      fetch(`${BACKEND_URL}/compile`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fileName, codeText })
@@ -22,7 +22,7 @@ let sessionId = null;
     }
 
     function listenToOutput(fileName, sessionId) {
-      const eventSource = new EventSource(`/run_stream/${sessionId}/${fileName}`);
+      const eventSource = new EventSource(`${BACKEND_URL}/run_stream/${sessionId}/${fileName}`);
       const output = document.getElementById("output");
 
       eventSource.onmessage = function (event) {
@@ -46,7 +46,7 @@ let sessionId = null;
       
       if (!input || !sessionId) return;
 
-      fetch("/send_input", {
+      fetch(`${BACKEND_URL}/send_input`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fileName, input, session_id: sessionId })
