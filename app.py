@@ -10,7 +10,7 @@ import uuid
 import shutil
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://fortran-compiler.onrender.com"])
 active_processes = {}
 
 @app.route("/")
