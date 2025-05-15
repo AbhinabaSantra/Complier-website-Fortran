@@ -18,5 +18,4 @@ RUN pip install flask flask-cors
 # Expose port 5000 for Flask
 EXPOSE 5000
 
-# Run the Flask app
 CMD ["python", "app.py"]
