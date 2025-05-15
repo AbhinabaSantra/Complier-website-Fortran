@@ -1,5 +1,5 @@
 let sessionId = null;
-const BACKEND_URL = 'https://fortran-live-compiler.onrender.com'
+const BACKEND_URL = 'https://fortran-compiler.onrender.com'
     function compileAndRun() {
       const fileName = document.querySelector(".fileName").value.trim();
       const codeText = document.querySelector(".codeText").value.trim();
