@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #1a202c;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+input.fileName, textarea.codeText, #inputField {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
+    background-color: #f9f9f9;
+}
+
+textarea.codeText {
+    height: 200px;
+    resize: vertical;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+pre#output {
+    white-space: pre-wrap;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    margin-top: 20px;
+    min-height: 100px;
+}
+
+#inputBox {
+    display: none;
+    margin-top: 20px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+}
